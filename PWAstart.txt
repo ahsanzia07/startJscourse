@@ -1,0 +1,21 @@
+1st of all make a serviceworker 
+
+!st make a file in public folder
+then make a file in src folder 
+make a function in that src file and then get public file in  this file 
+
+serviceworker code 
+
+const swDev = () => {
+   let swUrl= `${process.env.PUBLIC_URL}/sw.js`
+   navigator.serviceWorker.register(swUrl).then((response)=>{
+       console.warn("response",response)
+   })
+}
+
+export default swDev
+
+
+
+then open index.js and import youyr file with function in index js file and then call the function 
+and remove reportwebVitals function
